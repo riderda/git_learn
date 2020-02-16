@@ -9,6 +9,7 @@ git commit -m <info>
 版本查询:
 	git log //获取版本信息
 	参数: --pretty=online 单行显示
+	git log --graph --pretty=oneline --abbrev-commit//巨好看的版本路线
 
 版本回溯:
 	git reset --hard <版本号>
@@ -33,9 +34,22 @@ git commit -m <info>
 	git reset 可以回退版本，也可以把暂存区的修改撤销掉
 		git reset HEAD <file>
 
+工作现场:
+	隐藏当前工作现场:git stash
+	工作现场列表:git stash list
+	恢复工作现场:
+		git stash apply ,但不会删除列表,还需要 git stash drop
+		git stash pop ,恢复的同时删除stash列表
+
 git merge <branch>
 	合并branch分支到当前分支
 
+	--no-ff:不启用fast-forward
+	使用例子:
+		git merge --no-ff -m "这个参数会生成一个commit" <branch>
+		//感觉就是完全覆写
+
+git cherry-pick <commit>//不懂
 指令的历史记录:
 	git reflog //查询历史记录,至于是什么历史记录,自己看看就知道
 
