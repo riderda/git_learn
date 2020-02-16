@@ -26,6 +26,7 @@ git commit -m <info>
 指令的历史记录:
 	git reflog //查询历史记录,至于是什么历史记录,自己看看就知道
 
-版本库:
+版本库结构:
 	file:///home/chenweida/git_learn/0.jpeg
 
+git rm <file> //删除版本库的文件
