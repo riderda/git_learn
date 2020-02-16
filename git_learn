@@ -1,6 +1,10 @@
 git init
 git add <file> 
+git status	
+git diff
+	git diff HEAD -- readme.txt//查看工作区和版本库最新版本的区别
 git commit -m <info>
+	该操作之会把暂存区的修改提交
 
 版本查询:
 	git log //获取版本信息
