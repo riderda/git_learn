@@ -2,7 +2,7 @@ git init
 git add <file> 
 git status	
 git diff
-	git diff HEAD -- readme.txt//查看工作区和版本库最新版本的区别
+git diff HEAD -- readme.txt//查看工作区和版本库最新版本的区别
 git commit -m <info>
 	该操作之会把暂存区的修改提交
 
@@ -16,12 +16,25 @@ git commit -m <info>
 	HEAD^:上一个版本
 	HEAD^^:上上个版本
 	以次类推:也可以 HEAD~num:表示上num个版本
-
+//////////////////////////////////////////////////////
 	文件撤销:
 		git checkout -- <file>//返回到最近的一次git add 或者 git commit 时的状态
+	切换分支:
+		git checkout <branch>//切换到branch分支
+		git checkout -b <new_branch>//新建一个分支,并且切换到该新分支
+//------建议使用------//
+		git switch -c <new_branch>//新建一个分支,并且切换过去
+		git switch <branch>//切换到branch分支
+	创建分支:
+		git branch <new_branch> //创建一个新分支
+	删除分支:
+		git branch -d <exits_branch>
+///////////////////////////////////////////////////////
 	git reset 可以回退版本，也可以把暂存区的修改撤销掉
 		git reset HEAD <file>
 
+git merge <branch>
+	合并branch分支到当前分支
 
 指令的历史记录:
 	git reflog //查询历史记录,至于是什么历史记录,自己看看就知道
