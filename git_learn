@@ -17,8 +17,15 @@ git commit -m <info>
 	HEAD^^:上上个版本
 	以次类推:也可以 HEAD~num:表示上num个版本
 
+	文件撤销:
+		git checkout -- <file>//返回到最近的一次git add 或者 git commit 时的状态
+	git reset 可以回退版本，也可以把暂存区的修改撤销掉
+		git reset HEAD <file>
+
+
 指令的历史记录:
 	git reflog //查询历史记录,至于是什么历史记录,自己看看就知道
 
 版本库:
 	file:///home/chenweida/git_learn/0.jpeg
+
