@@ -30,6 +30,8 @@ git commit -m <info>
 		git branch <new_branch> //创建一个新分支
 	删除分支:
 		git branch -d <exits_branch>
+		git branch -D <exits_branch>//强制删除
+
 ///////////////////////////////////////////////////////
 	git reset 可以回退版本，也可以把暂存区的修改撤销掉
 		git reset HEAD <file>
@@ -57,3 +59,22 @@ git cherry-pick <commit>//不懂
 	file:///home/chenweida/git_learn/0.jpeg
 
 git rm <file> //删除版本库的文件
+/////////////////////////////////////////////////////////////
+
+
+多人协作:
+	git remote//查看远程库
+	参数:
+		-v 详细信息
+
+	推送分支:
+		git push origin master
+				 远程分支 本地分支
+	抓取分支:
+		git clone git@github.xxxxxxxxxxxxxxxxxxxxxx//复制仓库
+		git checkout -b dev origin/dev//将远程的dev分支创建到本地
+		git pull //把最新的提交抓取下来//好难理解～～～
+		git branch --set-upstream-to=origin/dev dev//指定远程的dev分支和与本地的dev链接
+
+
+
