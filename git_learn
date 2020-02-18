@@ -97,3 +97,10 @@ git rm <file> //删除版本库的文件
 		eg:
 			#Vim:
 			*.swp
+指令别名:
+	git config --global alias.<new_cmd> <old_cmd>
+
+配置文件:
+	针对用户的全局配置在用户主目录下的.gitconfig
+
+	针对仓库的配置在仓库下的.git/config
