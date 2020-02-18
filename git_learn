@@ -1,5 +1,6 @@
 git init
 git add <file> 
+	//-f 强制add
 git status	
 git diff
 git diff HEAD -- readme.txt//查看工作区和版本库最新版本的区别
@@ -76,5 +77,23 @@ git rm <file> //删除版本库的文件
 		git pull //把最新的提交抓取下来//好难理解～～～
 		git branch --set-upstream-to=origin/dev dev//指定远程的dev分支和与本地的dev链接
 
+	整理分支:
+		git rebase//不会
 
+创建标签:
+	git tag <tag_name>:给当前分支打上标签
+	git tag <tag_name> <commit>:给指定commit打上标签
+	git tag -a <tag_name> -m "info" <commit>:给指定commit打上带有标签信息的标签
+删除标签:
+	git tag -d <tag_name> //仅限于本地
+	git push origin :refs/tags/<tagname>//可以删除一个远程标签。
 
+	展示当前标签:git tag
+
+展示标签的信息:
+	git show <tag_name>
+忽略文件:
+	在根目录编写.gitignore
+		eg:
+			#Vim:
+			*.swp
